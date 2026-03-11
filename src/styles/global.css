@@ -627,6 +627,25 @@ code {
   box-shadow: var(--shadow-soft);
 }
 
+@media (max-width: 640px) {
+  .essay-body {
+    font-size: 1rem;
+  }
+
+  .essay-body table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .essay-body th,
+  .essay-body td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
 .essay-body th,
 .essay-body td {
   padding: 0.88rem 1rem;
