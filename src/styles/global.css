@@ -165,9 +165,9 @@ code {
   top: max(24px, calc(50vh - 7rem));
   max-width: 16rem;
   padding: 1.1rem 2.8rem 1.15rem 1.15rem;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
-  background: rgba(249, 243, 234, 0.84);
+  background: #1a1a1a;
   box-shadow: var(--shadow-soft);
   opacity: 0;
   transform: translateY(14px);
@@ -192,7 +192,7 @@ code {
   padding: 0;
   border: 0;
   border-radius: 8px;
-  background: rgba(95, 75, 56, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .context-rail__dismiss span {
@@ -201,7 +201,7 @@ code {
   left: 8px;
   width: 16px;
   height: 1.5px;
-  background: rgba(49, 36, 24, 0.82);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .context-rail__dismiss span:first-child {
@@ -214,7 +214,7 @@ code {
 
 .context-rail__eyebrow {
   margin: 0 0 0.45rem;
-  color: var(--text);
+  color: #ffffff;
   font-family: var(--ui);
   font-size: 1.25rem;
   font-weight: 700;
@@ -223,20 +223,22 @@ code {
 
 .context-rail__copy {
   margin: 0;
-  color: var(--text-dim);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.05rem;
   line-height: 1.5;
   text-wrap: balance;
 }
 
 .context-rail__copy a {
-  color: rgba(47, 36, 28, 0.92);
-  text-decoration-thickness: 0.08em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.2em;
   font-weight: 600;
 }
 
 .context-rail__copy a:hover {
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .toc-rail__scroll {
@@ -763,10 +765,10 @@ code {
 .comment-card__body blockquote {
   margin: 0 0 1.1rem;
   padding: 0.85rem 1rem;
-  border: 1px solid #d8dee4;
-  border-left: 4px solid #afb8c1;
+  border: 1px solid rgba(180, 165, 140, 0.3);
+  border-left: 4px solid rgba(180, 165, 140, 0.5);
   border-radius: 12px;
-  background: rgba(246, 248, 250, 0.92);
+  background: rgba(249, 243, 234, 0.5);
   color: #57606a;
 }
 
@@ -802,9 +804,9 @@ code {
 .mobile-context-prompt__inner {
   position: relative;
   padding: 0.95rem 3rem 1rem 1rem;
-  border: 1px solid rgba(93, 74, 57, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
-  background: rgba(251, 246, 238, 0.94);
+  background: #1a1a1a;
   backdrop-filter: blur(18px);
   box-shadow: 0 16px 34px rgba(74, 57, 41, 0.18);
   opacity: 0;
@@ -832,7 +834,7 @@ code {
   padding: 0;
   border: 0;
   border-radius: 8px;
-  background: rgba(95, 75, 56, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .mobile-context-prompt__dismiss span {
@@ -841,7 +843,7 @@ code {
   left: 8px;
   width: 16px;
   height: 1.5px;
-  background: rgba(49, 36, 24, 0.82);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .mobile-context-prompt__dismiss span:first-child {
@@ -854,7 +856,7 @@ code {
 
 .mobile-context-prompt__eyebrow {
   margin: 0 0 0.35rem;
-  color: var(--text);
+  color: #ffffff;
   font-family: var(--ui);
   font-size: 1.08rem;
   font-weight: 700;
@@ -862,14 +864,17 @@ code {
 
 .mobile-context-prompt__copy {
   margin: 0;
-  color: var(--text-dim);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.92rem;
   line-height: 1.45;
   text-wrap: balance;
 }
 
 .mobile-context-prompt__copy a {
-  color: inherit;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.2em;
 }
 
 @media (max-width: 1180px) {
