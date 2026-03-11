@@ -1,0 +1,35 @@
+---
+interface Props {
+  gistId?: string;
+  gistUrl?: string;
+}
+
+const { gistId = "", gistUrl = "" } = Astro.props;
+---
+
+<section
+  class="discussion"
+  aria-labelledby="discussion-title"
+  data-discussion
+  id="reader-notes"
+  data-gist-id={gistId}
+  data-gist-url={gistUrl}
+>
+  <div class="discussion__header">
+    <h2 id="discussion-title" data-toc-target data-toc-text="Reader notes" data-toc-depth="2">Reader notes and replies</h2>
+  </div>
+
+  <p class="discussion__intro">
+    Replies are posted on GitHub and mirrored here for reading.
+  </p>
+
+  <a class="discussion__link" href={gistUrl || "#"} target="_blank" rel="noreferrer">
+    Comment on GitHub
+  </a>
+
+  <div class="discussion__status" data-discussion-status>
+    Loading comments from GitHub…
+  </div>
+
+  <div class="discussion__list" data-discussion-list hidden></div>
+</section>

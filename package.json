@@ -1,0 +1,15 @@
+{
+  "name": "opcs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.7",
+    "astro": "^5.0.0",
+    "typescript": "^5.9.3"
+  }
+}

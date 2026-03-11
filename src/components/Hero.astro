@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  author: string;
+  date: string;
+}
+
+const { title, author, date } = Astro.props;
+---
+
+<header class="hero">
+  <div class="hero__media" aria-hidden="true"></div>
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content">
+    <div class="hero__credit hero__credit--desktop">
+      <p>
+        Photo by Julian Herzog, via Wikimedia Commons,
+        <a href="https://commons.wikimedia.org/wiki/File:Purdue_Bell_Tower_Purdue_University_2016_02.jpg" target="_blank" rel="noreferrer">CC BY 4.0</a>.
+      </p>
+    </div>
+
+    <div class="hero__panel">
+      <h1 data-hero-title>{title}</h1>
+      <div class="hero__meta">
+        <a class="hero__author" href="https://github.com/kartva/" target="_blank" rel="noreferrer" aria-label={`Visit ${author}'s GitHub profile`}>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.52.1.7-.22.7-.5v-1.74c-2.85.62-3.45-1.21-3.45-1.21-.46-1.18-1.14-1.49-1.14-1.49-.93-.64.08-.63.08-.63 1.02.07 1.56 1.05 1.56 1.05.92 1.56 2.4 1.11 2.99.85.09-.66.36-1.11.66-1.37-2.28-.26-4.68-1.14-4.68-5.09 0-1.12.4-2.03 1.05-2.74-.1-.26-.46-1.32.1-2.76 0 0 .86-.28 2.82 1.05a9.76 9.76 0 0 1 5.14 0c1.95-1.33 2.81-1.05 2.81-1.05.56 1.44.21 2.5.1 2.76.66.71 1.05 1.62 1.05 2.74 0 3.96-2.4 4.82-4.7 5.08.37.32.7.94.7 1.9v2.82c0 .28.19.6.71.5A10.5 10.5 0 0 0 12 1.5Z"></path>
+          </svg>
+          <span>{author}</span>
+        </a>
+        <span>{date}</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="hero__credit hero__credit--mobile">
+  <p>
+    Photo by Julian Herzog, via Wikimedia Commons,
+    <a href="https://commons.wikimedia.org/wiki/File:Purdue_Bell_Tower_Purdue_University_2016_02.jpg" target="_blank" rel="noreferrer">CC BY 4.0</a>.
+  </p>
+</div>

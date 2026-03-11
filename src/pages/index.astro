@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Discussion from "../components/Discussion.astro";
+import EssayBody from "../components/EssayBody.astro";
+import Hero from "../components/Hero.astro";
+
+const defaultGistId = "30c528420d68869dbcf376cd028fe038";
+const defaultGistUrl = "https://gist.github.com/kartva/30c528420d68869dbcf376cd028fe038";
+const gistId = import.meta.env.PUBLIC_GIST_ID ?? defaultGistId;
+const gistUrl = import.meta.env.PUBLIC_GIST_URL ?? defaultGistUrl;
+---
+
+<BaseLayout title="Optimizing Purdue CS">
+  <main class="page-shell" data-page-shell>
+    <button
+      class="toc-trigger"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-toc"
+      data-toc-trigger
+    >
+      <span class="sr-only">Open table of contents</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <aside class="toc-rail" aria-label="Table of contents">
+      <div class="toc-rail__inner">
+        <h2 class="toc-rail__title" data-toc-rail-title>Optimizing Purdue CS</h2>
+        <div class="toc-rail__body">
+          <div class="toc-progress" aria-hidden="true">
+            <div class="toc-progress__track"></div>
+            <div class="toc-progress__indicator" data-progress-indicator></div>
+          </div>
+          <div class="toc-rail__scroll" data-toc-scroll>
+            <nav class="toc-list" data-toc-desktop></nav>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="mobile-toc" id="mobile-toc" aria-hidden="true" data-mobile-toc>
+      <div class="mobile-toc__scrim" data-toc-close></div>
+      <aside class="mobile-toc__panel" aria-label="Mobile table of contents">
+        <button class="mobile-toc__close" type="button" data-toc-close aria-label="Close table of contents">
+          <span></span>
+          <span></span>
+        </button>
+        <h2 class="toc-rail__title">Optimizing Purdue CS</h2>
+        <nav class="toc-list toc-list--mobile" data-toc-mobile></nav>
+      </aside>
+    </div>
+
+    <section class="essay-column">
+      <Hero title="Optimizing Purdue CS" author="Kartavya Vashishtha" date="Updated March 10, 2026. Originally published April 29, 2025. " />
+
+      <div class="essay-frame" data-reading-surface>
+        <EssayBody />
+        <Discussion gistId={gistId} gistUrl={gistUrl} />
+      </div>
+    </section>
+
+    <aside class="context-rail" aria-label="Related information">
+      <div class="context-rail__inner">
+        <button class="context-rail__dismiss" type="button" aria-label="Dismiss voting prompt" data-context-dismiss>
+          <span></span>
+          <span></span>
+        </button>
+        <p class="context-rail__eyebrow">Was this helpful?</p>
+        <p class="context-rail__copy">
+          <a href="https://my.cs.purdue.edu/info/voting">
+            Nominations for outstanding service to the department are open until March 24!
+          </a>
+        </p>
+      </div>
+    </aside>
+
+    <div class="mobile-context-prompt" aria-hidden="true" data-mobile-context-prompt>
+      <div class="mobile-context-prompt__inner">
+        <button
+          class="mobile-context-prompt__dismiss"
+          type="button"
+          aria-label="Dismiss voting prompt"
+          data-mobile-context-dismiss
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <p class="mobile-context-prompt__eyebrow">Was this helpful?</p>
+        <p class="mobile-context-prompt__copy">
+          <a href="https://my.cs.purdue.edu/info/voting">
+            Nominations for outstanding service to the department are open until March 24!
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    import "../scripts/page.ts";
+  </script>
+</BaseLayout>
