@@ -284,7 +284,7 @@ const updateProgress = () => {
 };
 
 const syncContextPromptTriggers = (progress: number) => {
-  const triggerHeading = document.getElementById("a-note-before-you-read");
+  const triggerHeading = document.getElementById("why-am-i-writing-this");
   const viewportHeight = window.innerHeight;
   const hasReachedTrigger = triggerHeading
     ? triggerHeading.getBoundingClientRect().top <= viewportHeight * 0.45
